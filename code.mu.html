@@ -124,5 +124,25 @@
             </ul>
         </div>
         <script src="3.8.js"></script>
+
+        <h3>Задача 9</h3>
+        <p>
+            Дан массив с продуктами (названия, цены за штуку и количество).
+            <pre>
+                products: [
+                    {name: 'product1', price: 100, quantity: 5},
+                    {name: 'product2', price: 200, quantity: 4},
+                    {name: 'product3', price: 300, quantity: 3},
+                ]
+            </pre>
+            Выведите названия, цены, количества и сумму (произведение цены и количества).
+        </p>
+        <h3>Ответ:</h3>
+        <div id="s3t9">
+            <ul>
+                <li v-for="product in products"> {{ product.name }}, цена: {{ product.price }}, количество: {{ product.quantity }}, сумма: {{ product.quantity * product.price }} </li>
+            </ul>
+        </div>
+        <script src="3.9.js"></script>
 </body>
 </html>
