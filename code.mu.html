@@ -144,5 +144,22 @@
             </ul>
         </div>
         <script src="3.9.js"></script>
+
+        <h3>Задача 10</h3>
+        <p>
+            Сформируйте список ul, выводя в каждой итерации цикла по 3 тега li. 
+            Чтобы ничего не выдумывать, использую данные из предыдущей задачи
+        </p>
+        <h3>Ответ:</h3>
+        <div id="s3t10">
+            <ul>
+                <template v-for="product in products">
+                    <li> {{ product.name }} </li>
+                    <li> {{ product.price }} </li>
+                    <li> {{ product.quantity }} </li>
+                </template>
+            </ul>
+        </div>
+        <script src="3.10.js"></script>
 </body>
 </html>
