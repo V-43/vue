@@ -104,5 +104,25 @@
             </ul>
         </div>
         <script src="3.4.js"></script>
+
+        <h3>Задача 8</h3>
+        <p>
+            Дан следующий массив:
+            <pre>
+                hrefs: [
+                    {href: '1.html', text: 'ссылка 1'},
+                    {href: '2.html', text: 'ссылка 2'},
+                    {href: '3.html', text: 'ссылка 3'},
+                ]
+            </pre>
+            Выведите на экран ссылки в виде списка ul. 
+        </p>
+        <h3>Ответ:</h3>
+        <div id="s3t8">
+            <ul>
+                <li v-for="link in hrefs"> <a v-bind:href="link.href"> {{ link.text }} </a> </li>
+            </ul>
+        </div>
+        <script src="3.8.js"></script>
 </body>
 </html>
