@@ -92,7 +92,7 @@
         </div>
         <script src="3.2.js"></script>
 
-        <h3>Задача 4</h3>
+        <h3>Задачи 4-5</h3>
         <p>
             Дан следующий объект: { employee1: '100$', employee2: '200$', employee3: '300$', }.
             Выведите зарплаты работников в виде списка ul.
@@ -100,7 +100,7 @@
         <h3>Ответ:</h3>
         <div id="s3t4">
             <ul>
-                <li v-for="salary in workers"> {{ salary }} </li>
+                <li v-for="(salary,employee) in workers"> {{ employee }} - {{ salary }} </li>
             </ul>
         </div>
         <script src="3.4.js"></script>
