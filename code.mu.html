@@ -273,5 +273,21 @@
                 <button v-on:click="popItem">Pop Item</button>
             </div>
             <script src="5.3.js"></script> 
+            
+            Vue поддерживает следующий список методов, для работы с массивами: push, pop, shift, unshift, splice, sort, reverse. 
+            Изменения, сделанные с помощью этих методов отслеживаются Vue и сразу видны на странице. 
+            <h3>Задача 5</h3>
+            <p>
+                Дана кнопка. Дан массив. Выведите элементы этого массива в виде списка ul. 
+                Сделайте так, чтобы по нажатию на кнопку пункты списка стали в обратном порядке. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s5t5">
+                <ul>
+                    <li v-for="item in items"> {{ item }} </li>
+                </ul>
+                <button v-on:click="reverse">reverse</button>
+            </div>
+            <script src="5.5.js"></script> 
 </body>
 </html>
