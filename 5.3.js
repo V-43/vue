@@ -6,6 +6,9 @@ let app5_3 = new Vue({
 	methods: {
 		shiftItem: function() {
 			this.items.shift();
-		}
+        },
+        popItem: function() {
+            this.items.pop();
+        },
 	}
 });
