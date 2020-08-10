@@ -258,5 +258,20 @@
                 <button v-on:click="addItem">Add !!!</button>
             </div>
             <script src="5.2.js"></script> 
+
+            <h3>Задача 3</h3>
+            <p>
+                Дана кнопка. Дан массив. 
+                Выведите элементы этого массива в виде списка ul. 
+                Сделайте так, чтобы каждый раз по нажатию на кнопку из массива удалялся первый элемент и соответствующие изменения мгновенно отображались в нашем списке ul. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s5t3">
+                <ul>
+                    <li v-for="item in items"> {{ item }} </li>
+                </ul>
+                <button v-on:click="shiftItem">Shift Item</button>
+            </div>
+            <script src="5.3.js"></script> 
 </body>
 </html>
