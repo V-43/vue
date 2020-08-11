@@ -6,7 +6,7 @@ let app8_6 = new Vue({
     },
     methods: {
         addItem: function() {
-            this.items.push(this.newItem);
+            this.items.unshift(this.newItem);
         },
     }
 });
