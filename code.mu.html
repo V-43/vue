@@ -637,6 +637,21 @@
                 <input type="text" v-model="text2">
                 <button v-on:click="swap">Swap</button>
             </div>
-            <script src="8.4.js"></script> 
+            <script src="8.4.js"></script>  
+            
+            <h3>Задача 5</h3>
+            <p>
+                Дан инпут, 3 абзаца и кнопка. В инпут вводится ФИО пользователя через пробел. 
+                Сделайте так, чтобы по нажатию на кнопку в первом абзаце появилась фамилия пользователя, во втором - имя, а в третьем - отчество. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s8t5">
+                <input type="text" v-model="fio">
+                <p> {{ surname }} </p>
+                <p> {{ name }} </p>
+                <p> {{ middleName }} </p>
+                <button v-on:click="splitFIO">Split FIO</button>
+            </div>
+            <script src="8.5.js"></script> 
 </body>
 </html>
