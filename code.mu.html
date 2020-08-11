@@ -440,6 +440,20 @@
                 <button v-on:click="toggleParagraph">Touch</button>
             </div>
             <script src="7.6.js"></script> 
+            
+            <h3>Задача 7</h3>
+            <p>
+                Дан массив. Выведите элементы этого массива в виде списка ul. Пусть также дана кнопка. 
+                Сделайте так, чтобы наша кнопка скрывала и показывала наш список. Пусть при этом список будет изначально скрыт.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t7">
+                <ul v-if="showList">
+                    <li v-for="item in items"> {{ item }} </li>
+                </ul>
+                <button v-on:click="toggleList">Touch</button>
+            </div>
+            <script src="7.7.js"></script> 
 
 </body>
 </html>
