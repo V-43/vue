@@ -472,17 +472,25 @@
             </div>
             <script src="7.8.js"></script> 
             
-            <h3>Задача 9</h3>
+            <h3>Задачи 9-10</h3>
             <p>
                 Дан абзац и кнопка.
                 Сделайте так, чтобы кнопка скрывала и показывала наш абзац и при этом меняла свой текст в соответствии со своим действием.  
             </p>
             <h3>Ответ:</h3>
             <div id="s7t9">
-                <p v-if="show">
+                <p v-if="shows & 1">
                     Paragraph
                 </p>
-                <button v-on:click="toggleParagraph">{{ show ? "Hide" : "Show" }}</button>
+                <button v-on:click="toggleParagraph(1)">{{ shows & 1 ? "Hide" : "Show" }}</button>
+                <p v-if="shows & 2">
+                    Paragraph2
+                </p>
+                <button v-on:click="toggleParagraph(2)">{{ shows & 2 ? "Hide" : "Show" }}</button>
+                <p v-if="shows & 4">
+                    Paragraph3
+                </p>
+                <button v-on:click="toggleParagraph(4)">{{ shows & 4 ? "Hide" : "Show" }}</button>
             </div>
             <script src="7.9.js"></script> 
 
