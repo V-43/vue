@@ -8,5 +8,8 @@ let app8_6 = new Vue({
         addItem: function() {
             this.items.unshift(this.newItem);
         },
+        removeItem: function(idx) {
+            this.items.splice(idx, 1);
+        }
     }
 });

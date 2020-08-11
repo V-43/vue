@@ -663,7 +663,7 @@
             <div id="s8t6">
                 <input type="text" v-model="newItem">
                 <ul>
-                    <li v-for="item in items"> {{ item }} </li>
+                    <li v-for="(item, index) in items"> {{ item }} <button v-on:click="removeItem(index)">Delete</button></li>
                 </ul>
                 <button v-on:click="addItem">Add item</button>
             </div>
