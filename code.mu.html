@@ -363,5 +363,17 @@
                 </ul>
             </div>
             <script src="6.3.js"></script> 
+
+            <h3>Задача 4</h3>
+            <p>
+                Дан массив с числами. Выведите элементы этого массива в виде списка ul. Сделайте так, чтобы по нажатию на любую li в ней появлялся квадрат стоящего в ней числа. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s6t4">
+                <ul>
+                    <li style="cursor: pointer;" v-for="(item, index) in items" v-on:click="squareItem(index)"> {{ item }} </li>
+                </ul>
+            </div>
+            <script src="6.4.js"></script> 
 </body>
 </html>
