@@ -546,6 +546,23 @@
                 <p v-else-if="age > 26"> мужчина </p>
             </div>
             <script src="7.13.js"></script> 
+            
+            <h3>Задача 14</h3>
+            <p>
+                Пусть у вас даны 3 абзаца и кнопка. 
+                Сделайте так, чтобы по нажатию на кнопку эти абзацы скрывались. 
+                Используйте для этого только одну директиву v-if, объединив абзацы тегом &lg;template>.
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t14">
+                <template v-if="visible">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </template>
+                <button v-on:click="hide">Hide</button>
+            </div>
+            <script src="7.14.js"></script> 
 
 </body>
 </html>
