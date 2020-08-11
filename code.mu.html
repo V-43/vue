@@ -609,5 +609,21 @@
                 <button v-on:click="sqrt">Square root</button>
             </div>
             <script src="8.2.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Даны два инпута. Дана кнопка. Дан абзац. В каждый инпут вводятся числа. 
+                Сделайте так, чтобы по нажатию на кнопку в абзаце появилась сумма этих чисел. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s8t3">
+                <input type="number" v-model="num1">
+                <input type="number" v-model="num2">
+                <p>
+                    {{ result }}
+                </p>
+                <button v-on:click="multiply">Multiply</button>
+            </div>
+            <script src="8.3.js"></script> 
 </body>
 </html>
