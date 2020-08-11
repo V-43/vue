@@ -579,6 +579,20 @@
             <p>
                 При совместном использовании v-if и v-for, директива v-for имеет более <a href="https://ru.vuejs.org/v2/guide/list.html#v-for-и-v-if">высокий приоритет</a>
             </p>
+            
 
+            <h2 align="center">8.Работа с формами в фреймворке Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Дан инпут. Сделайте так, чтобы вводимый в инпут текст сразу выводился в абзаце под ним. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s8t1">
+                <input type="text" v-model="text">
+                <p>
+                    {{ text }}
+                </p>
+            </div>
+            <script src="8.1.js"></script> 
 </body>
 </html>
