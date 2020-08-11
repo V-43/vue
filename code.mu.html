@@ -387,5 +387,24 @@
                 </ul>
             </div>
             <script src="6.5.js"></script> 
+            
+
+            <h2 align="center">7.Работа с условиями в фреймворке Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Пусть в data хранится свойство show. Пусть у вас также есть два абзаца. 
+                Сделайте так, чтобы первый абзац был показан на экране, если свойство show равно true, а второй абзац, наоборот, показан, если свойство show равно false. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t1">
+                <p v-if="show">
+                    First paragraph
+                </p>
+                <p v-if="!show">
+                    Second paragraph
+                </p>
+            </div>
+            <script src="7.1.js"></script> 
+
 </body>
 </html>
