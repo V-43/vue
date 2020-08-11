@@ -471,6 +471,20 @@
                 <button v-on:click="changeParagraph">Change Paragraph</button>
             </div>
             <script src="7.8.js"></script> 
+            
+            <h3>Задача 9</h3>
+            <p>
+                Дан абзац и кнопка.
+                Сделайте так, чтобы кнопка скрывала и показывала наш абзац и при этом меняла свой текст в соответствии со своим действием.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t9">
+                <p v-if="show">
+                    Paragraph
+                </p>
+                <button v-on:click="toggleParagraph">{{ show ? "Hide" : "Show" }}</button>
+            </div>
+            <script src="7.9.js"></script> 
 
 </body>
 </html>
