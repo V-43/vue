@@ -594,5 +594,20 @@
                 </p>
             </div>
             <script src="8.1.js"></script> 
+            
+            <h3>Задача 2</h3>
+            <p>
+                Дан инпут. Дана кнопка. Дан абзац. В инпут вводится число. 
+                Сделайте так, чтобы по нажатию на кнопку абзаце появился квадратный корень этого числа. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s8t2">
+                <input type="number" v-model="num">
+                <p>
+                    {{ result }}
+                </p>
+                <button v-on:click="sqrt">Square root</button>
+            </div>
+            <script src="8.2.js"></script> 
 </body>
 </html>
