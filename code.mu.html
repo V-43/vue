@@ -493,6 +493,29 @@
                 <button v-on:click="toggleParagraph(4)">{{ shows & 4 ? "Hide" : "Show" }}</button>
             </div>
             <script src="7.9.js"></script> 
+            
+            <h3>Задача 11</h3>
+            <p>
+                Пусть в data хранится следующее: 
+                <pre>
+                    data: {
+                        hello: true,
+                        name: 'Вася'
+                    }
+                </pre> 
+                С помощью свойства name выведите на экран 'Привет, Вася', если свойство hello равно true и 'Пока, Вася', если оно равно false. 
+                Для решения задачи сделайте два абзаца. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t11">
+                <p v-if="hello">
+                    Привет, {{ name }}
+                </p>
+                <p v-else>
+                    Пока, {{ name }}
+                </p>
+            </div>
+            <script src="7.11.js"></script> 
 
 </body>
 </html>
