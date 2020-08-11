@@ -351,5 +351,17 @@
                 <button v-on:click="sayHello('Петя')">Petya</button>
             </div>
             <script src="6.2.js"></script> 
+
+            <h3>Задача 3</h3>
+            <p>
+                Дан массив. Выведите элементы этого массива в виде списка ul. Сделайте так, чтобы по нажатию на любую li она удалялась из списка. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s6t3">
+                <ul>
+                    <li style="cursor: pointer;" v-for="(item, index) in items" v-on:click="removeItem(index)"> {{ item }} </li>
+                </ul>
+            </div>
+            <script src="6.3.js"></script> 
 </body>
 </html>
