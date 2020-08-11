@@ -7,6 +7,9 @@ let app7_2 = new Vue({
     methods: {
         hideParagraph: function() {
             this.showName = false;
+        },
+        showParagraph: function() {
+            this.showName = true;
         }
     }
 });
