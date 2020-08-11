@@ -454,6 +454,23 @@
                 <button v-on:click="toggleList">Touch</button>
             </div>
             <script src="7.7.js"></script> 
+            
+            <h3>Задача 8</h3>
+            <p>
+                Даны два абзаца и кнопка. Пусть один абзац скрыт, а второй показан. 
+                Сделайте так, чтобы по нажатию на кнопку показанный абзац скрывался, а скрытый - показывался. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t8">
+                <p v-if="showFirst">
+                    First Paragraph
+                </p>
+                <p v-if="!showFirst">
+                    Second Paragraph
+                </p>
+                <button v-on:click="changeParagraph">Change Paragraph</button>
+            </div>
+            <script src="7.8.js"></script> 
 
 </body>
 </html>
