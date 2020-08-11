@@ -3,5 +3,10 @@ let app7_2 = new Vue({
 	data: {
         showName: true,
         name: 'Вася'
+    },
+    methods: {
+        hideParagraph: function() {
+            this.showName = false;
+        }
     }
 });
