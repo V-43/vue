@@ -426,6 +426,20 @@
                 <button v-if="!showName" v-on:click="showParagraph">Show Paragraph</button>
             </div>
             <script src="7.2.js"></script> 
+            
+            <h3>Задача 6</h3>
+            <p>
+                Дан абзац и кнопка. 
+                Сделайте так, чтобы по первому нажатию на кнопку абзац скрывался, а по второму - показывался обратно. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s7t6">
+                <p v-if="showName">
+                    {{ name }}
+                </p>
+                <button v-on:click="toggleParagraph">Touch</button>
+            </div>
+            <script src="7.6.js"></script> 
 
 </body>
 </html>
