@@ -525,13 +525,7 @@
             </p>
             <h3>Ответ:</h3>
             <div id="s7t12">
-                <p v-if="day == 0">Понедельник</p>
-                <p v-if="day == 1">Вторник</p>
-                <p v-if="day == 2">Среда</p>
-                <p v-if="day == 3">Четверг</p>
-                <p v-if="day == 4">Пятница</p>
-                <p v-if="day == 5">Суббота</p>
-                <p v-if="day == 6">Воскресенье</p>
+                <p v-for="(item, index) in week" v-if="day == index"> {{ item }}</p>
             </div>
             <script src="7.12.js"></script> 
 
