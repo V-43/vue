@@ -700,5 +700,18 @@
                 </p>
             </div>
             <script src="9.3.js"></script> 
+            
+            <h3>Задача 4</h3>
+            <p>
+                Дан инпут. Сделайте так, чтобы вводимый в инпут текст сразу выводился в абзаце под ним в перевернутом виде. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s9t4">
+                <input type="text" v-model="text">
+                <p>
+                    {{ text.split('').reverse().join('') }}
+                </p>
+            </div>
+            <script src="9.4.js"></script> 
 </body>
 </html>
