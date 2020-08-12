@@ -686,5 +686,19 @@
                 </p>
             </div>
             <script src="9.2.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Дан инпут и абзац. В инпут вводится возраст пользователя. 
+                Сделайте так, чтобы при наборе текста в абзаце автоматически появлялся год рождения пользователя. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s9t3">
+                <input type="number" v-model="age">
+                <p>
+                    {{ new Date().getFullYear() - age }} or {{ new Date().getFullYear() - age - 1 }}
+                </p>
+            </div>
+            <script src="9.3.js"></script> 
 </body>
 </html>
