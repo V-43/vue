@@ -819,19 +819,23 @@
             </div>
             <script src="10.7.js"></script> 
             
-            <h3>Задача 8</h3>
+            <h3>Задачи 8-9</h3>
             <p>
                 Спросите у пользователя с помощью радиокнопочек, какой язык для него родной (например, ru, en или de). 
                 Сделайте так, чтобы выбранный язык вывелся в абзаце под радиокнопочками. 
+            </p>
+            <p>
+                Модифицируйте предыдущую задачу следующим образом: пусть у нас есть 3 абзаца с текстом на разном языке. 
+                В зависимости от выбора пользователя выведите фразу на выбранном им языке. Задачу решите с помощью директивы v-if или v-if-else. 
             </p>
             <h3>Ответ:</h3>
             <div id="s10t8">
                 <input name="radio" type="radio" v-model="lang" value="ru">ru
                 <input name="radio" type="radio" v-model="lang" value="en">en
                 <input name="radio" type="radio" v-model="lang" value="fr">fr
-                <p>
-                    {{ lang }}
-                </p>
+                <p v-if="lang=='ru'">Здравствуйте!</p>
+                <p v-if="lang=='en'">Hello!</p>
+                <p v-if="lang=='fr'">Bonjour!</p>
             </div>
             <script src="10.8.js"></script> 
 
