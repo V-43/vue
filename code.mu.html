@@ -818,6 +818,22 @@
                 </ul>
             </div>
             <script src="10.7.js"></script> 
+            
+            <h3>Задача 8</h3>
+            <p>
+                Спросите у пользователя с помощью радиокнопочек, какой язык для него родной (например, ru, en или de). 
+                Сделайте так, чтобы выбранный язык вывелся в абзаце под радиокнопочками. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t8">
+                <input name="radio" type="radio" v-model="lang" value="ru">ru
+                <input name="radio" type="radio" v-model="lang" value="en">en
+                <input name="radio" type="radio" v-model="lang" value="fr">fr
+                <p>
+                    {{ lang }}
+                </p>
+            </div>
+            <script src="10.8.js"></script> 
 
 </body>
 </html>
