@@ -882,6 +882,17 @@
                 <p v-bind:id="str">Paragraph</p>
             </div>
             <script src="11.1.js"></script> 
+            
+            <h3>Задача 2</h3>
+            <p>
+                Дан инпут. Сделайте кнопку, нажатие на которую будет по очереди блокировать и разблокировать наш инпут. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s11t2">
+                <input type="text" v-bind:disabled="isDisabled">
+                <button v-on:click="isDisabled = !isDisabled">Touch</button>
+            </div>
+            <script src="11.2.js"></script> 
 
 </body>
 </html>
