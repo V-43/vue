@@ -803,6 +803,21 @@
                 <p>{{ lang.join(', ') }}</p>
             </div>
             <script src="10.6.js"></script> 
+            
+            <h3>Задача 7</h3>
+            <p>
+                Даны чекбоксы. С помощью директивы v-for сделайте так, чтобы их value выводились в виде списка ul.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t7">
+                <input type="checkbox" v-model="lang" value="html">html
+                <input type="checkbox" v-model="lang" value="css">css
+                <input type="checkbox" v-model="lang" value="js">js
+                <ul>
+                    <li v-for="item in lang"> {{ item }} </li>
+                </ul>
+            </div>
+            <script src="10.7.js"></script> 
 
 </body>
 </html>
