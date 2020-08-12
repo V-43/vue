@@ -724,5 +724,21 @@
                 <input type="text" v-model="text">
             </div>
             <script src="9.5.js"></script> 
+            
+
+            <h2 align="center">10.Продвинутая работа с формами в фреймворке Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Дан текстареа. Сделайте так, чтобы при наборе текста в этом текстареа, этот текст одновременно выводился в абзаце под ним. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t1">
+                <textarea v-model="text"></textarea>
+                <p>
+                    {{ text }}
+                </p>
+            </div>
+            <script src="10.1.js"></script> 
+            
 </body>
 </html>
