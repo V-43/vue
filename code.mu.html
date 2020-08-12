@@ -934,6 +934,17 @@
                 <button v-on:click="isDone = true">Done</button>
             </div>
             <script src="12.3.js"></script> 
+            
+            <h3>Задача 5</h3>
+            <p>
+                Дан абзац. Дано свойство isValid. 
+                Если это свойство имеет значение true - добавьте абзацу класс valid, а если false - то класс invalid. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s12t5">
+                <p v-bind:class="{valid: isValid, invalid: !isValid}">Paragraph</p>
+            </div>
+            <script src="12.5.js"></script> 
 
 </body>
 </html>
