@@ -838,6 +838,23 @@
                 <p v-if="lang=='fr'">Bonjour!</p>
             </div>
             <script src="10.8.js"></script> 
+            
+            <h3>Задача 10</h3>
+            <p>
+                Спросите у пользователя с помощью селекта в каком городе он живет. 
+                Сделайте так, чтобы выбранный город вывелся в абзаце под селектом. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t10">
+                Город:
+                <select v-model="city">
+                    <option>Киров</option>
+                    <option>Питер</option>
+                    <option>Москва</option>
+                </select>
+                <p> {{ city }} </p>
+            </div>
+            <script src="10.10.js"></script> 
 
 </body>
 </html>
