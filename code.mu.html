@@ -740,5 +740,20 @@
             </div>
             <script src="10.1.js"></script> 
             
+            <h3>Задача 2</h3>
+            <p>
+                Дан текстареа и кнопка. В текстареа вводится текст. 
+                По нажатию на кнопку получите массив введенных в текстареа слов и выведите элементы этого массива в виде списка ul. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t2">
+                <textarea v-model="text"></textarea>
+                <button v-on:click="getWordsArray">Get words array</button>
+                <ul>
+                    <li v-for="word in words"> {{ word }} </li>
+                </ul>
+            </div>
+            <script src="10.2.js"></script> 
+
 </body>
 </html>
