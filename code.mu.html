@@ -918,6 +918,17 @@
                 <p v-bind:class="{valid: isValid}">Paragraph</p>
             </div>
             <script src="12.2.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Дан абзац. Дано свойство isValid и свойство isDone. Если свойство isValid имеет значение true - добавьте абзацу класс valid. 
+                Если свойство isDone имеет значение true - добавьте абзацу класс task-done.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s12t3">
+                <p v-bind:class="{valid: isValid, 'task-done': isDone}">Paragraph</p>
+            </div>
+            <script src="12.3.js"></script> 
 
 </body>
 </html>
