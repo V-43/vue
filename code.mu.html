@@ -779,6 +779,17 @@
                 <p v-if="checked">Paragraph</p>
             </div>
             <script src="10.4.js"></script> 
+            
+            <h3>Задача 5</h3>
+            <p>
+                Дан чекбокс. Выведите его состояние ('отмечен' или 'не отмечен') в абзаце под ним. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t5">
+                <input type="checkbox" v-model="checked">
+                <p>{{ checked ? 'отмечен' : 'не отмечен' }}</p>
+            </div>
+            <script src="10.5.js"></script> 
 
 </body>
 </html>
