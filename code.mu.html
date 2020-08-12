@@ -767,6 +767,18 @@
                 </p>
             </div>
             <script src="10.3.js"></script> 
+            
+            <h3>Задача 4</h3>
+            <p>
+                Дан чекбокс. Дан абзац. 
+                С помощью директивы v-if сделайте следующее: если чекбокс отмечен - абзац должен быть показан, а если не отмечен - то скрыт. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t4">
+                <input type="checkbox" v-model="checked"> {{ checked ? 'hide' : 'show' }}
+                <p v-if="checked">Paragraph</p>
+            </div>
+            <script src="10.4.js"></script> 
 
 </body>
 </html>
