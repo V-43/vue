@@ -919,14 +919,19 @@
             </div>
             <script src="12.2.js"></script> 
             
-            <h3>Задача 3</h3>
+            <h3>Задачи 3-4</h3>
             <p>
                 Дан абзац. Дано свойство isValid и свойство isDone. Если свойство isValid имеет значение true - добавьте абзацу класс valid. 
                 Если свойство isDone имеет значение true - добавьте абзацу класс task-done.  
             </p>
+            <p>
+                Модифицируйте предыдущую задачу. Пусть isDone изначальное имеет значение false. 
+                Сделайте кнопку, по нажатию на которую isDone поменяется на true тем самым добавив абзацу класс task-done. 
+            </p>
             <h3>Ответ:</h3>
             <div id="s12t3">
                 <p v-bind:class="{valid: isValid, 'task-done': isDone}">Paragraph</p>
+                <button v-on:click="isDone = true">Done</button>
             </div>
             <script src="12.3.js"></script> 
 
