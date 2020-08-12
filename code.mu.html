@@ -855,6 +855,21 @@
                 <p> {{ city }} </p>
             </div>
             <script src="10.10.js"></script> 
+            
+            <h3>Задача 11</h3>
+            <p>
+                Дан массив. Дан селект. Выведите этот массив в виде селекта. 
+                Сделайте так, чтобы выбор пользователя отображался на экране.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s10t11">
+                Город:
+                <select v-model="selCity">
+                    <option v-for="city in cities"> {{ city }} </option>
+                </select>
+                <p> {{ selCity }} </p>
+            </div>
+            <script src="10.11.js"></script> 
 
 </body>
 </html>
