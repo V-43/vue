@@ -963,6 +963,18 @@
                 <button v-on:click="color='red'">Red</button>
             </div>
             <script src="13.1.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Дан чекбокс. Дан абзац. 
+                Сделайте следующее: если чекбокс отмечен - абзац должен быть красного цвета, а если не отмечен - то черного. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s13t3">
+                <input type="checkbox" v-model="checked">Red
+                <p v-bind:style="{color: checked ? 'red' : 'black'}">Paragraph</p>
+            </div>
+            <script src="13.3.js"></script> 
 
 </body>
 </html>
