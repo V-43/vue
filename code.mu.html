@@ -883,14 +883,17 @@
             </div>
             <script src="11.1.js"></script> 
             
-            <h3>Задача 2</h3>
+            <h3>Задачи 2-3</h3>
             <p>
                 Дан инпут. Сделайте кнопку, нажатие на которую будет по очереди блокировать и разблокировать наш инпут. 
             </p>
+            <p>
+                Модифицируйте предыдущую задачу так, чтобы состояние инпута регулировалось чекбоксом: если чекбокс отмечен, то инпут разблокирован, а если не отмечен - то инпут заблокирован. Пусть по умолчанию чекбокс будет не отмечен. 
+            </p>
             <h3>Ответ:</h3>
             <div id="s11t2">
-                <input type="text" v-bind:disabled="isDisabled">
-                <button v-on:click="isDisabled = !isDisabled">Touch</button>
+                <input type="text" v-bind:disabled="!enabled">
+                <input type="checkbox" v-model="enabled"> Разблокировать
             </div>
             <script src="11.2.js"></script> 
 
