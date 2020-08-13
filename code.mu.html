@@ -1031,7 +1031,7 @@
             </div>
             <script src="14.3.js"></script> 
             
-            <h3>Задачи 4-5-6</h3>
+            <h3>Задачи 4-5-6-7</h3>
             <p>
                 Дана HTML таблица. В ней мы будем отображать купленные продукты. 
                 Каждый ряд таблицы - это один продукт, а именно: название продукта, его цена, количество и уплаченная сумма, которая равна цене умноженной на количество. 
@@ -1054,6 +1054,9 @@
             <p>
                 Модифицируйте предыдущую задачу: сделайте также колонку со ссылкой 'удалить', по нажатию на которую будет удаляться соответствующий продукт. 
             </p>
+            <p>
+                Модифицируйте предыдущую задачу: сделайте так, чтобы по нажатию на любую ячейку в ней появлялся инпут, с помощью которого эту ячейку можно будет поредактировать. 
+            </p>
             <h3>Ответ:</h3>
             <div id="s14t4">
                 <table border="1" style="border-collapse: collapse">
@@ -1068,9 +1071,18 @@
                     </thead>
                     <tbody>
                         <tr v-for="(product, index) in products">
-                            <td> {{ product.name }} </td>
-                            <td> {{ product.price }} </td>
-                            <td> {{ product.quantity }} </td>
+                            <td v-on:click="product.editName = true"> 
+                                <p> {{ product.name }} </p> 
+                                <input v-if="product.editName" type="text" placeholder="product" v-model="product.name">
+                            </td>
+                            <td v-on:click="product.editPrice = true"> 
+                                <p> {{ product.price }} </p> 
+                                <input v-if="product.editPrice" type="number" placeholder="price" v-model="product.price">
+                            </td>
+                            <td v-on:click="product.editQuantity = true"> 
+                                <p> {{ product.quantity }} </p> 
+                                <input v-if="product.editQuantity" type="number" placeholder="quantity" v-model="product.quantity">
+                            </td>
                             <td> {{ product.price * product.quantity }} </td>
                             <td> <a href="#" v-on:click="deleteProduct(index)">delete</a> </td>
                         </tr>

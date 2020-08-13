@@ -15,10 +15,13 @@ let app14_4 = new Vue({
                 name: this.product,
                 price: this.price,
                 quantity: this.quantity,
+                editName: false,
+                editPrice: false,
+                editQuantity: false,
             });
         },
         deleteProduct: function(idx) {
             this.products.splice(idx, 1);
-        }
+        },
     }
 });
