@@ -1,15 +1,21 @@
 let app14_4 = new Vue({
 	el: '#s14t4',
 	data: {
-        products: [
-            {name: 'product1', price: 100, quantity: 4},
-            {name: 'product2', price: 200, quantity: 5},
-            {name: 'product3', price: 300, quantity: 6},
-        ],
+        products: [],
+        product: '',
+        price: null,
+        quantity: null,
     },
     methods: {
         totalPrice: function() {
             return this.products.reduce((total, product) => total + product.price * product.quantity, 0);
+        },
+        addProduct: function() {
+            this.products.push({
+                name: this.product,
+                price: this.price,
+                quantity: this.quantity,
+            });
         }
     }
 });
