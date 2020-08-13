@@ -1030,6 +1030,47 @@
                 </ul>
             </div>
             <script src="14.3.js"></script> 
+            
+            <h3>Задача 4</h3>
+            <p>
+                Дана HTML таблица. В ней мы будем отображать купленные продукты. 
+                Каждый ряд таблицы - это один продукт, а именно: название продукта, его цена, количество и уплаченная сумма, которая равна цене умноженной на количество. 
+                Пусть продукты хранятся в следующего виде объекта: 
+                <pre>
+                    [
+                    {name: 'product1', price: 100, quantity: 4},
+                    {name: 'product2', price: 200, quantity: 5},
+                    {name: 'product3', price: 300, quantity: 6},
+                ];
+                </pre>
+                Выведите эти продукты в виде таблицы, в отдельной колонке рассчитав сумму. 
+                Под таблицей выведите полную стоимость всех продуктов.  
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s14t4">
+                <table border="1" style="border-collapse: collapse">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Summ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="product in products">
+                            <td> {{ product.name }} </td>
+                            <td> {{ product.price }} </td>
+                            <td> {{ product.quantity }} </td>
+                            <td> {{ product.price * product.quantity }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    {{ totalPrice() }}
+                </p>
+            </div>
+            <script src="14.4.js"></script> 
 
 </body>
 </html>
