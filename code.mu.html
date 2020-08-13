@@ -1097,6 +1097,26 @@
                 <button v-on:click="addProduct">Add</button>
             </div>
             <script src="14.4.js"></script> 
+            
+            <h3>Задача 8</h3>
+            <p>
+                Дан массив с юзерами: 
+                <pre>
+                    [
+                    {name: 'Коля', age: 30},
+                    {name: 'Вася', age: 40},
+                    {name: 'Петя', age: 50},
+                ];
+                </pre>
+                Выведите его элементы в виде списка ul. В каждой li будет имя и возраст юзера. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s14t8">
+                <ul>
+                    <li v-for="user in users"> {{ user.name }} - {{ user.age }} </li>
+                </ul>
+            </div>
+            <script src="14.8.js"></script> 
 
 </body>
 </html>
