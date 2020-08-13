@@ -1009,6 +1009,27 @@
                 </p>
             </div>
             <script src="14.2.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Дан массив с юзерами: 
+                <pre>
+                    [
+                    {name: 'Коля', active: true},
+                    {name: 'Вася', active: true},
+                    {name: 'Петя', active: false},
+                ];
+                </pre>
+                Выведите его элементы в виде списка ul. 
+                Если юзер активный (поле active равно true), выведите его зеленым цветом, а если не активный - красным. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s14t3">
+                <ul>
+                    <li v-for="user in users" v-bind:style="{color: user.active ? 'green' : 'red'}"> {{ user.name}} </li>
+                </ul>
+            </div>
+            <script src="14.3.js"></script> 
 
 </body>
 </html>
