@@ -6,5 +6,6 @@ let app14_8 = new Vue({
             {name: 'Вася', age: 40},
             {name: 'Петя', age: 50},
         ],
+        edit: -1,
     },
 });

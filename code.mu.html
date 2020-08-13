@@ -1098,7 +1098,7 @@
             </div>
             <script src="14.4.js"></script> 
             
-            <h3>Задача 8</h3>
+            <h3>Задачи 8-9</h3>
             <p>
                 Дан массив с юзерами: 
                 <pre>
@@ -1110,11 +1110,21 @@
                 </pre>
                 Выведите его элементы в виде списка ul. В каждой li будет имя и возраст юзера. 
             </p>
+            <p>
+                Модифицируйте предыдущую задачу так, чтобы в конце каждой li появилась ссылка 'редактировать'. 
+                По нажатию на эту ссылку под ul должны появится кнопка и два инпута, в которых будет имя и возраст пользователя. 
+                По нажатию на кнопку данные должны поредактироваться, а инпуты и кнопка спрятаться. 
+            </p>
             <h3>Ответ:</h3>
             <div id="s14t8">
                 <ul>
-                    <li v-for="user in users"> {{ user.name }} - {{ user.age }} </li>
+                    <li v-for="(user, index) in users"> {{ user.name }} - {{ user.age }} <a href="#" v-on:click="edit=index">edit</a> </li>
                 </ul>
+                <template v-if="edit!=-1">
+                    <input type="text" v-model="users[edit].name" placeholder="name">
+                    <input type="number" v-model="users[edit].age" placeholder="age">
+                    <button v-on:click="edit=-1">Save</button>
+                </template>
             </div>
             <script src="14.8.js"></script> 
 
