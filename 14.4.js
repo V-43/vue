@@ -16,6 +16,9 @@ let app14_4 = new Vue({
                 price: this.price,
                 quantity: this.quantity,
             });
+        },
+        deleteProduct: function(idx) {
+            this.products.splice(idx, 1);
         }
     }
 });
