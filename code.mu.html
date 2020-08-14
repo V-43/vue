@@ -1230,6 +1230,24 @@
                 </p>
             </div>
             <script src="15.8.js"></script> 
+            
+
+            <h2 align="center">16.Работа с вычисляемыми свойствами в фреймворке Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Пусть в data есть три свойства: name (имя), surname (фамилия) и patronymic (отчество). 
+                Сделайте вычисляемое свойство fullName, которое будет содержать фамилию, имя и отчество, записанные через пробел. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s16t1">
+                <input type="text" v-model="name" placeholder="name">
+                <input type="text" v-model="surname" placeholder="surname">
+                <input type="text" v-model="patronymic" placeholder="patronymic">
+                <p>
+                    {{ fullName }}
+                </p>
+            </div>
+            <script src="16.1.js"></script> 
 
 </body>
 </html>
