@@ -1084,7 +1084,7 @@
                                 <input v-if="product.editQuantity" type="number" placeholder="quantity" v-model="product.quantity">
                             </td>
                             <td> {{ product.price * product.quantity }} </td>
-                            <td> <a href="#" v-on:click="deleteProduct(index)">delete</a> </td>
+                            <td> <a href="#s14t4" v-on:click="deleteProduct(index)">delete</a> </td>
                         </tr>
                     </tbody>
                 </table>
@@ -1118,7 +1118,7 @@
             <h3>Ответ:</h3>
             <div id="s14t8">
                 <ul>
-                    <li v-for="(user, index) in users"> {{ user.name }} - {{ user.age }} <a href="#" v-on:click="edit=index">edit</a> </li>
+                    <li v-for="(user, index) in users"> {{ user.name }} - {{ user.age }} <a href="#s14t8" v-on:click="edit=index">edit</a> </li>
                 </ul>
                 <template v-if="edit!=-1">
                     <input type="text" v-model="users[edit].name" placeholder="name">
