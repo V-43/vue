@@ -1405,6 +1405,36 @@
                 </p>
             </div>
             <script src="18.3.js"></script> 
+            
+
+            <h2 align="center">19.Практика по фреймворку Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Реализуйте чеклист. Должен быть инпут с добавлением задачи, а над ним - список с задачами. 
+                Возле каждой задачи чекбос. Если нажать на чекбокс - задача становится выполненной, перечеркивается и 
+                становится серого цвета, чекбокс при этом пропадает. Справа от любой задачи должен быть крестик для удаления этой задачи.
+
+                Пусть новая задача добавляется по нажатию клавиши Enter.
+                
+                Задачу также можно поредактировать, если сделать двойной клик по ней - в этом случае вместо пункта списка появляется 
+                инпут с текстом задачи, можно поредактировать текст задачи, нажать Enter и задача изменится. Инпут при этом исчезнет. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s19t1">
+                <ul>
+                    <li v-for="(task, idx) in tasks" @dblclick="task.editing=true">
+                        <input v-if="task.editing" type="text" v-model="tasks[idx].text" v-on:keyup.enter="task.editing=false" placeholder="type task">
+                        <template v-else>
+                            <input type="checkbox" v-if="!task.complete" @click="task.complete=true">
+                            <span v-if="task.complete" style="color:gray; text-decoration: line-through;"> {{ task.text }} </span>
+                            <span v-else> {{ task.text }} </span>
+                            <a href="#" title="Delete Task" style="color:red" @click.prevent="tasks.splice(idx,1)">X</a>
+                        </template>
+                    </li>
+                </ul>
+                <input type="text" v-model="newTask" v-on:keyup.enter="tasks.push({text: newTask, complete: false})" placeholder="type new task">
+            </div>
+            <script src="19.1.js"></script> 
 
 </body>
 </html>
