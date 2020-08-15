@@ -1335,5 +1335,30 @@
             </div>
             <script src="17.4.js"></script> 
 
+            <h3>Работа с объектом Event</h3>
+            Иногда в обработчиках необходим доступ к оригинальному событию DOM. Его можно передать в метод, используя специальную переменную $event: 
+            <pre>
+                &lt;div id="app">
+                    &lt;button v-on:click="warn('Форма не может быть отправлена.', $event)">
+                        Отправить
+                    &lt;/button>
+                &lt;/div>
+                
+                let app = new Vue({
+                    el: '#app',
+                    data: {
+                        message: '',
+                    },
+                    methods: {
+                        warn: function (message, event) {
+                            // Теперь у нас есть доступ к нативному событию:
+                            event.preventDefault();
+                            
+                            alert(message);
+                        }
+                    }
+                });
+            </pre>
+
 </body>
 </html>
