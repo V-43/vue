@@ -1343,7 +1343,7 @@
                         Отправить
                     &lt;/button>
                 &lt;/div>
-                
+
                 let app = new Vue({
                     el: '#app',
                     data: {
@@ -1359,6 +1359,22 @@
                     }
                 });
             </pre>
+            
+
+            <h2 align="center">18.Модификаторы клавиш в фреймворке Vue</h2>
+            <h3>Задача 1</h3>
+            <p>
+                Дан инпут. В этот инпут вводится текст. 
+                Сделайте так, чтобы по нажатию на клавишу Enter введенный текст появился в абзаце под инпутом. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s18t1">
+                <input type="text" v-on:keyup.enter="text=$event.currentTarget.value">
+                <p>
+                    {{ text }}
+                </p>
+            </div>
+            <script src="18.1.js"></script> 
 
 </body>
 </html>
