@@ -1307,6 +1307,22 @@
                 <button v-on:click.once="alert(1)">Click</button>
             </div>
             <script src="17.2.js"></script> 
+            
+            <h3>Задача 3</h3>
+            <p>
+                Пусть в data есть свойство text, содержащее какой-нибудь текст. 
+                Выведите этот текст в каком-нибудь абзаце, используя директиву v-once. 
+                Сделайте кнопку, по нажатию на которую поменяется свойство text. 
+                Убедитесь, что текст в нашем абзаце при этом не поменяется. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s17t3">
+                <p v-once>
+                    {{ text }}
+                </p>
+                <button v-on:click = "text='qwe'">ChangeMsg</button>
+            </div>
+            <script src="17.3.js"></script> 
 
 </body>
 </html>
