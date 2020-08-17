@@ -1432,9 +1432,65 @@
                         </template>
                     </li>
                 </ul>
-                <input type="text" v-model="newTask" v-on:keyup.enter="tasks.push({text: newTask, complete: false})" placeholder="type new task">
+                <input type="text" v-model="newTask" v-on:keyup.enter="tasks.push({text: newTask, complete: false, editing: false})" placeholder="type new task">
             </div>
             <script src="19.1.js"></script> 
+            
+            <h3>Задача 2</h3>
+            <p>
+                Реализуйте органайзер. Он будет представлять собой календарь. 
+                По нажатию на любую дату с боку календаря должен появится список дел, запланированных на эту дату. 
+                Дела можно добавлять, удалять, редактировать, помечать сделанными. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s19t2" style="display: flex;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="cursor: pointer;" @click="year-=1">&lt;</th><th colspan="3"> {{ year }} </th> <th colspan="2" style="cursor: pointer;" @click="year+=1">&gt;</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2" style="cursor: pointer;" @click="prevMonth">&lt;</th><th colspan="3"> {{ months[month] }} </th> <th colspan="2" style="cursor: pointer;" @click="nextMonth">&gt;</th>
+                        </tr>
+                        <tr>
+                            <th>Пн</th>
+                            <th>Вт</th>
+                            <th>Ср</th>
+                            <th>Чт</th>
+                            <th>Пт</th>
+                            <th>Сб</th>
+                            <th>Вс</th>
+                        </tr>
+                    </thead>
+                    <tbody style="cursor: pointer;">
+                        <tr v-for="week in weeks">
+                            <td :style="{color: (date.month - month === 0) ? 'black': 'gray',
+                                        'text-decoration': isSelect(date.value) ? 'underline' : 'none',
+                                        'font-weight': isSelect(date.value) ? 'bold' : 'normal'}" 
+                                v-for="date in week"
+                                @click="selectDate(date.value, date.month)"> {{ date.value | formatDate }} </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-left: 20px;">
+                    <p>
+                        <b> {{ printSelectedDate() }} </b>
+                    </p>
+                    <ul>
+                        <li v-for="(note, idx) in notes[selectedDate]" @dblclick="note.editing=true">
+                            <input v-if="note.editing" type="text" v-model="notes[selectedDate][idx].text" v-on:keyup.enter="note.editing=false" placeholder="type note">
+                            <template v-else>
+                                <input type="checkbox" v-if="!note.complete" @click="note.complete=true">
+                                <span v-if="note.complete" style="color:gray; text-decoration: line-through;"> {{ note.text }} </span>
+                                <span v-else> {{ note.text }} </span>
+                                <a href="#" title="Delete note" style="color:red" @click.prevent="notes[selectedDate].splice(idx,1)">X</a>
+                            </template>
+                        </li>
+                    </ul>
+                    <input type="text" v-model="newNote" v-on:keyup.enter="addNote" placeholder="type new note">
+                </div>
+            </div>
+            <script src="19.2.js"></script> 
 
 </body>
 </html>
