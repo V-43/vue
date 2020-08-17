@@ -17,7 +17,7 @@ let app19_2 = new Vue({
             'ноябрь',
             'декабрь',
         ],
-        selectedDate: '2020-7-16',
+        selectedDate: '',
         notes: {
             '2020-7-16': [
                 {text: "asd", complete: false, editing: false}
@@ -76,8 +76,7 @@ let app19_2 = new Vue({
         },
         addNote: function() {
             if (!this.notes[this.selectedDate]) {
-                // this.$set(this.notes, this.selectedDate, []);
-                this.notes[this.selectedDate] = [];
+                this.$set(this.notes, this.selectedDate, []);
             }
             this.notes[this.selectedDate].push({text: this.newNote, complete: false, editing: false});
         },
@@ -88,6 +87,10 @@ let app19_2 = new Vue({
         isSelect: function(date) {
             let selDate = this.selectedDate.split('-');
             return this.year == selDate[0] && this.month == selDate[1] && date == selDate[2];
+        },
+        hasNotes: function(date) {
+            d = `${this.year}-${this.month}-${date}`;
+            return !!this.notes[d];
         }
     },
     filters: {
@@ -96,3 +99,5 @@ let app19_2 = new Vue({
         }
     }
 });
+let temp = new Date();
+app19_2.selectedDate = `${temp.getFullYear()}-${temp.getMonth()}-${temp.getDate()}`;

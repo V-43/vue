@@ -1466,7 +1466,8 @@
                         <tr v-for="week in weeks">
                             <td :style="{color: (date.month - month === 0) ? 'black': 'gray',
                                         'text-decoration': isSelect(date.value) ? 'underline' : 'none',
-                                        'font-weight': isSelect(date.value) ? 'bold' : 'normal'}" 
+                                        'font-weight': isSelect(date.value) ? 'bold' : 'normal',
+                                        'font-style': hasNotes(date.value) ? 'italic' : 'normal'}" 
                                 v-for="date in week"
                                 @click="selectDate(date.value, date.month)"> {{ date.value | formatDate }} </td>
                         </tr>
