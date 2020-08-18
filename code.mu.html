@@ -1513,5 +1513,43 @@
                 <textarea style="margin-left: 20px;" cols="30" rows="10" v-model="notes[selected]"></textarea>
             </div>
             <script src="19.3.js"></script> 
+
+            <h3>Задача 4</h3>
+            <p>
+                Дан массив с вопросами и правильными ответами на них: 
+                <pre>
+                    [
+                        {
+                            question: 'Вопрос 1',
+                            answer: 'Ответ 1'
+                        },
+                        {
+                            question: 'Вопрос 2',
+                            answer: 'Ответ 2'
+                        },
+                        {
+                            question: 'Вопрос 3',
+                            answer: 'Ответ 3'
+                        },
+                    ]
+                </pre>
+                Реализуйте тест. Покажите все вопросы на экране, а под каждым вопросом выведите инпут для ввода правильного ответа.
+
+                Пусть пользователь вбивает свой ответ в инпут и нажимает на Enter. 
+                Сразу же проверьте ответ пользователя на данный вопрос. 
+                Выведите над инпутом сообщение о правильности или неправильности ответа. 
+                Кроме того, покрасьте границу инпута в красный цвет, если дан неправильный ответ, и в зеленый - если дан правильный. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s19t4">
+                <ul>
+                    <li v-for="(quest, idx) in quests">
+                        <p> {{ quest.question }} </p>
+                        <p v-if="userAnswers[idx]"> {{ userAnswers[idx] === quest.answer ? 'Верно' : 'Неверно' }} </p>
+                        <input type="text" :style="{border: '3px solid', 'border-color': borders[idx]}" @keyup.enter="checkAnswer($event.currentTarget.value, idx)">
+                    </li>
+                </ul>
+            </div>
+            <script src="19.4.js"></script> 
 </body>
 </html>
