@@ -1493,5 +1493,25 @@
             </div>
             <script src="19.2.js"></script> 
 
+            <h3>Задача 3</h3>
+            <p>
+                Реализуйте блокнотик, в который можно добавлять новые записи. 
+                Записи появляются слева от блокнотика в виде ссылок с текстом в виде даты-времени создания этой записи. 
+                Можно нажать на ссылку и в блокноте появится текст за эту дату. 
+                Пусть сам блокнотик представляет собой textarea, расположенный по центру страницы. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s19t3" style="display: flex;">
+                <ul>
+                    <li v-for="(note, date) in notes">
+                        <a href="#" @click.prevent="selected=date"> {{ date }} </a>
+                    </li>
+                    <li>
+                        <button @click="addNote">Add Note</button>
+                    </li>
+                </ul>
+                <textarea style="margin-left: 20px;" cols="30" rows="10" v-model="notes[selected]"></textarea>
+            </div>
+            <script src="19.3.js"></script> 
 </body>
 </html>
