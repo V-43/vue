@@ -1618,12 +1618,13 @@
                 <p> {{ currentQuestion.question }} </p>
                 <ul v-if="!showResult">
                     <li v-for="(answer, idx) in currentQuestion.answers">
-                        <input type="checkbox" v-model="userAnswers" :value="2 ** idx" :key="currentQuestion.question"> {{ answer }}
+                        <input type="checkbox" v-model="userAnswers" :value="2 ** idx"> {{ answer }}
                     </li>
                 </ul>
                 <ul v-else>
                     <li v-for="(result, idx) in results">
-                        В задаче {{ idx+1 }} {{ result }}
+                        В задаче {{ idx+1 }} {{ result.rightAnswersCnt }} из {{ result.questRightCnt }} правильно отмеченных ответов
+                        и {{ result.wrongAnswersCnt }} неправильно
                     </li>
                 </ul>
                 <a v-if="!showResult" href="#" @click.prevent="checkAndNext"> {{ (quests.length) ? 'Next question' : 'Show result' }} </a>

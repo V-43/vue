@@ -43,14 +43,13 @@ let app19_6 = new Vue({
     },
     methods: {
         checkAndNext: function() {
-            let answers = this.userAnswers.reduce((sum, elem) => sum + elem, 0); 
-            /*let rightAnswers = this.currentQuestion.rights & answers; //правильно отмеченные пользователем ответы (10я СС)
+            let answers = this.userAnswers.reduce((sum, elem) => sum + elem, 0); //28
+            let rightAnswers = parseInt(this.currentQuestion.rights,2) & answers; //правильно отмеченные пользователем ответы (10я СС)
             let rightAnswersCnt = rightAnswers.toString(2).split('').reduce((sum, elem) => sum + +elem, 0); //кол-во правильно отмеченных ответов
             let questRightCnt = this.currentQuestion.rights.split('').reduce((sum, elem) => sum + +elem, 0); //кол-во правильных ответов
             let wrongAnswers = ~parseInt(this.currentQuestion.rights, 2) & answers; //неправильные ответы (10я СС)
             let wrongAnswersCnt = wrongAnswers.toString(2).split('').reduce((sum, elem) => sum + +elem, 0); //кол-во неправильно отмеченных
-            this.results.push({rightAnswersCnt, questRightCnt, wrongAnswersCnt});*/
-            this.results.push(answers === parseInt(this.currentQuestion.rights, 2) ? 'верно' : 'неверно');
+            this.results.push({rightAnswersCnt, questRightCnt, wrongAnswersCnt});
             this.userAnswers = [];
             if (this.quests.length) {
                 this.currentQuestion = this.quests.pop();
