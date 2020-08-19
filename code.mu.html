@@ -1607,6 +1607,27 @@
             </div>
             <script src="19.5.js"></script> 
 
-            
+            <h3>Задача 6</h3>
+            <p>
+                Реализуйте тест, в котором показывается один вопрос, 5 чекбоксов для ответа (может быть несколько правильных ответов). 
+                Под чекбоксами ссылка 'следующий вопрос'. По нажатию на эту ссылку вместо текущего вопроса показывается следующий. 
+                Когда вопросы заканчиваются, в последнем вопросе будет стоять ссылка не 'следующий вопрос', а 'показать результат'. 
+            </p>
+            <h3>Ответ:</h3>
+            <div id="s19t6">
+                <p> {{ currentQuestion.question }} </p>
+                <ul v-if="!showResult">
+                    <li v-for="(answer, idx) in currentQuestion.answers">
+                        <input type="checkbox" v-model="userAnswers" :value="2 ** idx" :key="currentQuestion.question"> {{ answer }}
+                    </li>
+                </ul>
+                <ul v-else>
+                    <li v-for="(result, idx) in results">
+                        В задаче {{ idx+1 }} {{ result }}
+                    </li>
+                </ul>
+                <a v-if="!showResult" href="#" @click.prevent="checkAndNext"> {{ (quests.length) ? 'Next question' : 'Show result' }} </a>
+            </div>
+            <script src="19.6.js"></script> 
 </body>
 </html>
